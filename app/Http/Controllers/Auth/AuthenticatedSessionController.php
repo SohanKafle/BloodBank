@@ -26,21 +26,9 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
-       
-
-        // if
-        // (auth()->user('role')->admin)
-        // {
-        //     return redirect()->intended(route('dashboard', absolute: false));
-            
-        // }
-        // else if(auth()->user->role('user')){
-        //     return view('index');
-
-        // }
 
         
-        
+        return redirect('/');
     }
 
     /**
