@@ -29,16 +29,23 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
+        $data=$request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'phone' =>['required'],
+            'phone' =>['required','numeric'],
             'bloodgroup'=>['required'],
-            'photopath'=>['required|image'],
-            'age'=>['required|integer'],
+            'photopath'=>['required'],
+            'age'=>['required'],
             'address'=>['required'],
         ]);
+        $photoname = time().'.'.$request->photopath->extension();
+        $request->photopath->move(public_path('images/donor'), $photoname);
+        $data['photopath'] = $photoname;
+        User::create($data);
+        return redirect()->route('donors.index')->with('success','Donor Registered Successfully');
+
+
 
         $user = User::create([
             'name' => $request->name,
