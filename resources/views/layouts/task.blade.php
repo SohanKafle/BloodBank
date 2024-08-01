@@ -11,7 +11,6 @@
     <style>
         * {
             box-sizing: border-box;
-            background-color: red;
         }
 
         html,
@@ -71,6 +70,52 @@
         .back-to-top:hover {
             background-color: #0056b3;
         }
+
+
+        li {
+            margin-left: 20px;
+        }
+
+        li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 7px 20px;
+            text-decoration: none;
+        }
+
+    
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: red;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 20px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 
@@ -90,7 +135,7 @@
                 </div>
 
 
-                <ul id="nav-links" class="hidden md:flex gap-10 items-center">
+                <ul id="nav-links" class="hidden md:flex items-center">
                     <li>
                         <a href="/" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">
                             <i class='bx bx-home'></i>
@@ -111,26 +156,22 @@
                     </li>
                     <li>
                         <a href="#contact" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">
-                            <i class='bx bx-envelope'></i>
-                            <span>Contact Us</span>
+                            <i class='bx bx-bell'></i>
+                            <span>Notification</span>
                         </a>
                     </li>
                 </ul>
 
-                <div class="hidden md:flex items-center space-x-4 lg:order-2">
-                    <a href="{{ route('login') }}">
-                        <button type="button" class="px-4 lg:px-5 py-2 lg:py-2.5 mr-2 text-white bg-gradient-to-br from-purple-500 to-purple-400 hover:bg-gradient-to-bl font-medium rounded-lg text-lg">
-                            Login
-                        </button>
-                    </a>
-                    <a href="{{ route('register') }}">
-                        <button class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-lg font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900">
-                            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-sec-600 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                Register
-                            </span>
-                        </button>
-                    </a>
-                </div>
+
+                <ul>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">User</a>
+                        <div class="dropdown-content">
+                            <a href="#">Profile</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
             <div id="mobile-menu" class="md:hidden hidden bg-gray-100 shadow-md transition-all">
@@ -159,21 +200,33 @@
                             <span>Contact Us</span>
                         </a>
                     </li>
-                    <li class="flex flex-col items-center space-y-2">
-                        <a href="{{ route('login') }}">
-                            <button type="button" class="px-4 lg:px-5 py-2 lg:py-2.5 text-white bg-gradient-to-br from-purple-500 to-purple-400 hover:bg-gradient-to-bl font-medium rounded-lg text-sm">
-                                Login
-                            </button>
-                        </a>
-                        <a href="{{ route('register') }}">
-                            <button class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900">
-                                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-sec-600 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                    Register
-                                </span>
-                            </button>
-                        </a>
-                    </li>
                 </ul>
+
+
+                <div class="relative" data-twe-dropdown-ref>
+                    <button class="flex items-center rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong" type="button" id="dropdownMenuButton1" data-twe-dropdown-toggle-ref aria-expanded="false" data-twe-ripple-init data-twe-ripple-color="light">
+                        Dropdown button
+                        <span class="ms-2 w-2 [&>svg]:h-5 [&>svg]:w-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </button>
+                    <ul class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark" aria-labelledby="dropdownMenuButton1" data-twe-dropdown-menu-ref>
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25" href="#" data-twe-dropdown-item-ref>Action</a>
+                        </li>
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25" href="#" data-twe-dropdown-item-ref>Another action</a>
+                        </li>
+                        <li>
+                            <a class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25" href="#" data-twe-dropdown-item-ref>Something else here</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
             </div>
         </nav>
     </header>
@@ -198,10 +251,10 @@
                         <i class='bx bx-map mr-2'></i> Gaindakot-01, Nawalpur
                     </li>
                     <li class="flex items-center mb-3 hover:text-blue-400">
-                        <i class='bx bx-phone mr-2'></i> 078-7501202 / 9812211443
+                        <i class='bx bx-phone mr-2'></i> 078-7501202 / 9812345678
                     </li>
                     <li class="flex items-center mb-3 hover:text-blue-400">
-                        <i class='bx bx-envelope mr-2'></i> info@
+                        <i class='bx bx-envelope mr-2'></i> info@bloodbank.com
                     </li>
                 </ul>
             </div>

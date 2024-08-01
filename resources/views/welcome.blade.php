@@ -5,26 +5,26 @@
 <section class="relative bg-pink-200 text-center py-20" data-aos="fade-up">
     <div class="absolute inset-0">
         <img src="https://static.vecteezy.com/system/resources/previews/008/191/708/non_2x/human-blood-donate-and-heart-rate-on-white-background-free-vector.jpg" alt="Blood donation" class="w-full h-full object-cover opacity-100">
-        <div class="absolute inset-0 bg-white opacity-50"></div>
+        <div class="absolute inset-0 bg-white opacity-40"></div>
     </div>
     <div class="relative container mx-auto px-4 py-16">
         <div class="flex flex-col items-center text-center">
-            <h1 class="text-5xl font-bold text-black mb-4 ">Donate Blood</h1>
-            <h1 class="text-5xl font-bold text-black mb-4 ">Save Lives!</h1>
-            <div class="text-3xl font-bold text-white mb-8 bg-red-500 py-4 px-4">Donate Today</div>
+            <h1 class="text-5xl font-bold text-black mb-2 ">DONATE BLOOD</h1>
+            <h1 class="text-5xl font-bold text-black mb-2">Save Lives!</h1>
+            <div class="text-2xl font-bold text-white mt-4 mb-8 bg-red-500 py-3 px-2 rounded-lg">Donate Today</div>
             <br>
             <br>
             <p class="text-lg mb-8 font-medium">Every blood donation counts, and every donor is a hero. Be a hero today and donate blood.</p>
             <div class="flex space-x-4">
-                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus-shadow-outline">Become Donors</button>
-                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus-shadow-outline">Search Donors</button>
+                <button class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus-shadow-outline">Become Donors</button>
+                <button class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus-shadow-outline">Request Blood</button>
             </div>
         </div>
     </div>
 </section>
 
 <section id="goals" class="py-10 container mx-auto" data-aos="fade-right">
-    <h1 class="text-4xl font-bold text-red-500 text-center mb-4">Our Goals!</h1>
+    <h1 class="text-4xl font-bold text-red-500 text-center mb-2">Our Goals!</h1>
     <p class="text-lg text-center mb-8 font-medium">Saving lives, Spreading Smiles!</p>
     <p class="text-center text-gray-500 mb-10 font-bold">We live on earth with an equal right to live in this earth because this is our earth</p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <h2 class="text-2xl font-bold text-gray-800 mb-2">Emergency Notifications</h2>
-            <p class="text-gray-500">The website sends emergency notifications to matching donors nearby via text, email, or mobile apps for prompt response.</p>
+            <p class="text-gray-500">The website sends emergency notifications to matching donors nearby via email or notifications through webapp.</p>
         </div>
     </div>
 </section>
