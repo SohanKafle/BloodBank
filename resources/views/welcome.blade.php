@@ -16,8 +16,10 @@
             <br>
             <p class="text-lg mb-8 font-medium">Every blood donation counts, and every donor is a hero. Be a hero today and donate blood.</p>
             <div class="flex space-x-4">
-                <button class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus-shadow-outline">Become Donors</button>
-                <button class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus-shadow-outline">Request Blood</button>
+                
+                <a href="{{route('register')}}" class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus-shadow-outline">Become Donors</a>
+                <a href="{{route('peoples.create')}}" class="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus-shadow-outline">Request Blood</a>
+            </form>
             </div>
         </div>
     </div>

@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <style>
         * {
             box-sizing: border-box;
-            background-color: red;
+           
         }
 
         html,
@@ -116,7 +120,14 @@
                         </a>
                     </li>
                 </ul>
-
+                @auth
+                <a href="" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">Hi, {{auth()->user()->name}}</a>
+                
+                <form action="{{route('logout')}}" method="post" class="inline">
+                    @csrf
+                    <button type="submit"><i class="ri-logout-box-r-line"></i></button>
+                </form>
+                @else
                 <div class="hidden md:flex items-center space-x-4 lg:order-2">
                     <a href="{{ route('login') }}">
                         <button type="button" class="px-4 lg:px-5 py-2 lg:py-2.5 mr-2 text-white bg-gradient-to-br from-purple-500 to-purple-400 hover:bg-gradient-to-bl font-medium rounded-lg text-lg">
@@ -132,6 +143,8 @@
                     </a>
                 </div>
             </div>
+                @endauth
+                
 
             <div id="mobile-menu" class="md:hidden hidden bg-gray-100 shadow-md transition-all">
                 <ul class="flex flex-col items-center space-y-4 py-4">
