@@ -194,12 +194,6 @@
                             <span>Our Services</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#contact" class="text-1xl font-bold flex items-center space-x-1 text-black hover:text-blue-500">
-                            <i class='bx bx-envelope'></i>
-                            <span>Contact Us</span>
-                        </a>
-                    </li>
                 </ul>
 
 

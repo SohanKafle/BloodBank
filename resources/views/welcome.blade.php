@@ -80,7 +80,7 @@
         <div class="rounded-lg shadow-md p-6 bg-white transition-transform transform hover:scale-105 hover:shadow-xl hover:bg-red-50">
             <div class="flex items-center justify-center rounded-full w-16 h-16 bg-red-500 text-white font-bold mb-4">4</div>
             <h2 class="text-xl font-bold mb-2">Receive the Notification</h2>
-            <p class="text-gray-700">Receive notifications about upcoming donation drives and other relevant information through our system.</p>
+            <p class="text-gray-700">Receive notifications about donations request and other relevant information through our system.</p>
         </div>
     </div>
 </section>
