@@ -264,12 +264,12 @@
                 <ul>
                     <li class="mb-2"><a href="/" class="hover:text-blue-400">Home</a></li>
                     <li class="mb-2"><a href="#about" class="hover:text-blue-400">About Us</a></li>
-                    <li class="mb-2"><a href="#services" class="hover:text-blue-400">Our Services</a></li>
+                    <li class="mb-2"><a href="#services" class="hover:text-blue-400">Notifications</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3 class="font-bold mb-2">Follow Us On</h3>
+                <h3 class="font-bold mb-2">Find Us On</h3>
                 <div class="flex space-x-4">
                     <a href="#" class="hover:text-blue-400"><i class='bx bxl-facebook'></i></a>
                     <a href="#" class="hover:text-blue-400"><i class='bx bxl-twitter'></i></a>

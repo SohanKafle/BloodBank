@@ -23,7 +23,7 @@
     </div>
 </section>
 
-<section id="goals" class="py-10 container mx-auto" data-aos="fade-right">
+<section id="goals" class="py-10 container mx-auto bg-pink-100" data-aos="fade-right">
     <h1 class="text-4xl font-bold text-red-500 text-center mb-2">Our Goals!</h1>
     <p class="text-lg text-center mb-8 font-medium">Saving lives, Spreading Smiles!</p>
     <p class="text-center text-gray-500 mb-10 font-bold">We live on earth with an equal right to live in this earth because this is our earth</p>
@@ -58,7 +58,7 @@
     </div>
 </section>
 
-<section id="steps" class="py-10 container mx-auto" data-aos="fade-left">
+<section id="steps" class="py-10 container mx-auto bg-pink-100" data-aos="fade-left">
     <h1 class="text-4xl font-bold text-red-500 text-center mb-4">Steps to Become Donors</h1>
     <p class="text-lg text-center mb-8 font-medium">A minute of work can save thousands of lives.</p>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -85,7 +85,7 @@
     </div>
 </section>
 
-        <section id="search" class="container mx-auto px-4 py-8" data-aos="fade-down">
+        <section id="search" class="container mx-auto px-4 py-8 bg-pink-100" data-aos="fade-down">
             <div class="flex flex-col lg:flex-row items-center lg:items-start ml-6">
                 <div class="flex-1 mb-8 lg:mb-0 lg:pr-8 mt-20">
                     <h1 class="text-4xl font-bold text-red-500">Donors Near Me</h1>

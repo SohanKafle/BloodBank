@@ -11,7 +11,6 @@
     <style>
         * {
             box-sizing: border-box;
-            background-color: red;
         }
 
         html,
@@ -194,14 +193,14 @@
             <div>
                 <h3 class="font-bold mb-2">Contact Info</h3>
                 <ul class="text-gray-400 ">
-                    <li class="flex items-center mb-3 hover:text-blue-400">
+                    <li class="flex items-center mb-3 font-medium hover:text-red-500">
                         <i class='bx bx-map mr-2'></i> Gaindakot-01, Nawalpur
                     </li>
-                    <li class="flex items-center mb-3 hover:text-blue-400">
-                        <i class='bx bx-phone mr-2'></i> 078-7501202 / 9812211443
+                    <li class="flex items-center mb-3 font-medium hover:text-red-500">
+                        <i class='bx bx-phone mr-2'></i> 078-7501202 / 9812345678
                     </li>
-                    <li class="flex items-center mb-3 hover:text-blue-400">
-                        <i class='bx bx-envelope mr-2'></i> info@
+                    <li class="flex items-center mb-3 font-medium hover:text-red-500">
+                        <i class='bx bx-envelope mr-2'></i> info@bloodbank.com
                     </li>
                 </ul>
             </div>
@@ -209,25 +208,25 @@
             <div>
                 <h3 class="font-bold mb-2">Quick Links</h3>
                 <ul>
-                    <li class="mb-2"><a href="/" class="hover:text-blue-400">Home</a></li>
-                    <li class="mb-2"><a href="#about" class="hover:text-blue-400">About Us</a></li>
-                    <li class="mb-2"><a href="#services" class="hover:text-blue-400">Our Services</a></li>
+                    <li class="mb-1 font-medium"><a href="/" class="hover:text-red-500">Home</a></li>
+                    <li class="mb-1 font-medium"><a href="#about" class="hover:text-red-500">About Us</a></li>
+                    <li class="mb-1 font-medium"><a href="#services" class="hover:text-red-500">Our Goals</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3 class="font-bold mb-2">Follow Us On</h3>
+                <h3 class="font-bold mb-2">Find Us On</h3>
                 <div class="flex space-x-4">
-                    <a href="#" class="hover:text-blue-400"><i class='bx bxl-facebook'></i></a>
-                    <a href="#" class="hover:text-blue-400"><i class='bx bxl-twitter'></i></a>
-                    <a href="#" class="hover:text-blue-400"><i class='bx bxl-instagram'></i></a>
-                    <a href="#" class="hover:text-blue-400"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" class="hover:text-red-500"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="hover:text-red-500"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="hover:text-red-500"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="hover:text-red-500"><i class='bx bxl-linkedin'></i></a>
                 </div>
             </div>
         </div>
     </footer>
     <div class="footer-line"></div>
-    <div class="copyright text-center bg-gray-900 text-white py-2">
+    <div class="copyright text-center bg-gray-900 text-white py-2 font-medium">
         <p>&copy;{{date('Y')}} All Rights Reserved Blood Bank</p>
     </div>
 
