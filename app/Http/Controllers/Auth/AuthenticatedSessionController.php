@@ -28,16 +28,16 @@ class AuthenticatedSessionController extends Controller
     {
        
 
-        if
-        (auth()->user('role')->admin)
-        {
-            return redirect()->intended(route('dashboard', absolute: false));
+        // if
+        // (auth()->user('role')->admin)
+        // {
+        //     return redirect()->intended(route('dashboard', absolute: false));
             
-        }
-        else if(auth()->user->role('user')){
-            return view('index');
+        // }
+        // else if(auth()->user->role('user')){
+        //     return view('index');
 
-        }
+        // }
 
         
         
