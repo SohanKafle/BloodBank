@@ -10,7 +10,7 @@
 <body>
     <div class="grid grid-cols-2">
        <div class="relative">
-            <a href="{{route('home')}}" class="absolute bg-blue-500 text-white px-2 py-3 m-2 rounded-lg">Go Home</a>
+            <a href="{{route('welcome')}}" class="absolute bg-blue-500 text-white px-2 py-3 m-2 rounded-lg">Go Home</a>
             <img src="" alt="" class="w-full h-screen shadow-lg">
        </div>
         <div class="flex items-center justify-center w-8/12 mx-auto">

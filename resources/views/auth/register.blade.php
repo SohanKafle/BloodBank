@@ -10,8 +10,8 @@
 <body>
     <div class="grid grid-cols-2">
        <div class="relative">
-            <a href="{{route('home')}}" class="absolute bg-blue-500 text-white px-2 py-3 m-2 rounded-lg">Go Home</a>
-            <img src="" alt="" class="w-full h-screen shadow-lg">
+            <a href="{{route('welcome')}}" class="absolute bg-blue-500 text-white px-2 py-3 m-2 rounded-lg">Go Home</a>
+            <img src="https://thumbs.dreamstime.com/b/vector-illustration-red-blood-drop-bottle-hand-white-background-blood-bank-red-drop-cross-116932473.jpg" alt="" class="w-full h-screen shadow-lg">
        </div>
         <div class="flex items-center justify-center w-8/12 mx-auto">
             <div class="text-center">
