@@ -16,7 +16,7 @@ class PeopleController extends Controller
   public function store(Request $request){
     $data=$request->validate([
       'name'=>'required',
-      'phone'=>'required|numeric',
+      'phone'=>'required|numeric|unique',
       'address'=>'required',
       'bloodgroup'=>'required',
       'age'=>'required|numeric',

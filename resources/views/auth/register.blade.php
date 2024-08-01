@@ -10,8 +10,13 @@
 <body>
     <div class="grid grid-cols-2">
        <div class="relative">
+<<<<<<< HEAD
             <a href="{{route('welcome')}}" class="absolute bg-red-500 text-white px-2 py-3 m-2 rounded-lg">Go Home</a>
             <img src="https://www.cpsmumbai.org/Uploads/2762023161833920.png" alt="" class="w-full h-screen shadow-lg">
+=======
+            <a href="{{route('welcome')}}" class="absolute bg-blue-500 text-white px-2 py-3 m-2 rounded-lg">Go Home</a>
+            <img src="https://img.freepik.com/premium-vector/blood-donation-medical-background_87521-2933.jpg?w=360" alt="" class="w-full h-screen shadow-lg">
+>>>>>>> 5a3ea78d5ec41c920d7a56797540326216bf5801
        </div>
         <div class="flex items-center justify-center w-8/12 mx-auto">
             <div class="text-center">
