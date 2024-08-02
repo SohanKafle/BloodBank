@@ -33,8 +33,8 @@
             <div class="w-56 h-screen bg-gray-100 shadow">
                 <img src="{{asset('images/donor/adminlogo.png')}}" alt="" class="p-2 m-2 w-9/12 mx-auto mt-5 ">
                 <div class="mt-5">
-                    <a href="" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white"><i class="ri-dashboard-fill px-2"></i>Dashboard</a>
-                    <a href="" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white"><i class="ri-user-heart-line px-2"></i>Donors</a>
+                    <a href="{{route('dashboard')}}" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white"><i class="ri-dashboard-fill px-2"></i>Dashboard</a>
+                    <a href="{{route('donors.index')}}" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white"><i class="ri-user-heart-line px-2"></i>Donors</a>
                     <a href="" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white"><i class="ri-contrast-drop-2-line px-2"></i>Blood Requests</a>
                     <form action="{{route('logout')}}" method="post" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white">
                         @csrf

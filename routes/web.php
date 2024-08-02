@@ -1,6 +1,9 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+=======
+>>>>>>> 77f918d39b4cea0b4efce3d977eb5e4dea11eb3e
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\DashboardController;
 
@@ -20,7 +23,11 @@ Route::middleware(['auth','isAdmin'])->group(function () {
 Route::get('/peoples',[PeopleController::class,'index'])->name('peoples.index');
 Route::get('/peoples/create',[PeopleController::class,'create'])->name('peoples.create');
 Route::post('/peoples/store',[PeopleController::class,'store'])->name('peoples.store');
+<<<<<<< HEAD
 Route::get('/users/profile',[UsersController::class,'profile'])->name('users.profile');
+=======
+Route::get('donors/index/',[RegisteredUserController::class,'index'])->name('donors.index');
+>>>>>>> 77f918d39b4cea0b4efce3d977eb5e4dea11eb3e
 
 
 // Route::get('/dashboard', function () {

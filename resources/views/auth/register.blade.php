@@ -10,7 +10,7 @@
 <body>
     <div class="grid grid-cols-2">
        <div class="relative">
-            <a href="{{route('welcome')}}" class="absolute bg-red-500 hover:bg-red-700 text-white px-2 py-1 m-2 rounded-lg">Go Home</a>
+            <a href="{{route('welcome')}}" class="absolute bg-red-600 hover:bg-red-800 text-white px-2 py-1 m-2 rounded-lg">Go Home</a>
             <img src="https://www.cpsmumbai.org/Uploads/2762023161833920.png" alt="" class="w-full h-screen  shadow-lg">
        </div>
         <div class="flex items-center justify-center w-8/12 mx-auto">
@@ -64,7 +64,7 @@
                     @error('photopath')
                     <p class="text-red-500 text-sm">{{$message}}</p>
                     @enderror
-                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white py-2 w-full rounded-lg mt-2">Register</button>
+                    <button type="submit" class="bg-red-600 hover:bg-red-800 text-white py-2 w-full rounded-lg mt-2">Register</button>
                 </form>
                 <p class="mt-4">Already have an account? <a href="{{route('login')}}" class="text-red-500 ">Login</a></p>
             </div>
