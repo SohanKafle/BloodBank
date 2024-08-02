@@ -2,7 +2,7 @@
 @auth
 <div class="bg-white overflow-hidden shadow rounded-lg border">
     <div class="px-4 py-5 bg-red-600 sm:px-6">
-        <h3 class=" text-2xl leading-6 font-bold text-gray-900 text-center">
+        <h3 class=" text-2xl leading-6 font-bold text-white text-center">
             User Profile
         </h3>
     </div>
@@ -57,9 +57,16 @@
                 </dd>
             </div>
             <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                <dt class="text-sm font-medium text-gray-500">
-                    Report File
-                </dt>
+                
+                    <dt class="text-sm font-medium text-gray-500">
+                        Report Card
+                    </dt>
+                    <dt class="text-sm font-medium text-gray-500">
+                        <img src="{{asset('images/donor/'.auth()->user()->photopath)}}" class="w-24" alt="">
+                    </dt>
+                        
+                    
+              
                 <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                 <img src="" alt="">
                 </dd>
@@ -81,7 +88,9 @@
         }
 </style>
 <br>
-<a href="{{route('users.edit')}}"><button type="submit" class="bg-red-600 hover:bg-red-800 text-white py-2 w-6/12 ml-80 rounded-lg mt-2">Edit</button></a><br>
+<div>
+<a href="{{route('users.edit', auth()->user()->id)}}"><Button type="submit" class="bg-red-600 hover:bg-red-800 text-white py-2 w-6/12 ml-80 rounded-lg mt-2">Edit</Button></a>
+</div>
 <a href="{{route('users.index')}}"><button type="submit" class="bg-red-600 hover:bg-red-800 text-white py-2 w-6/12 ml-80 rounded-lg mt-2">Home</button></a>
  <br><br><!-- Footer -->
  <footer class="bg-gray-900 text-white py-8">

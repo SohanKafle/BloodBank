@@ -20,7 +20,7 @@ Route::middleware(['auth','isAdmin'])->group(function () {
 
 });
 Route::get('/peoples',[PeopleController::class,'index'])->name('peoples.index');
-Route::get('/peoples/home/',[PeopleController::class,'home'])->name('peoples.home');
+Route::get('/peoples/home/{id}/',[PeopleController::class,'home'])->name('peoples.home');
 Route::get('/peoples/create',[PeopleController::class,'create'])->name('peoples.create');
 Route::post('/peoples/store',[PeopleController::class,'store'])->name('peoples.store');
 Route::get('donors/index/',[RegisteredUserController::class,'index'])->name('donors.index');
@@ -38,8 +38,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 Route::get('users/index',[UsersController::class, 'index'])->name('users.index');
-Route::get('users/edit',[UsersController::class, 'edit'])->name('users.edit');
-Route::get('about',[PagesController::class, 'about'])->name('about');
+Route::get('users/edit/{id}',[UsersController::class, 'edit'])->name('users.edit');
+Route::post('users/update/{id}',[UsersController::class, 'update'])->name('users.update');
+Route::get('about',[UsersController::class, 'about'])->name('users.about');
+Route::get('profile',[UsersController::class, 'profile'])->name('users.profile');
 
 Route::get('register', [RegisteredUserController::class, 'create'])
 ->name('register');

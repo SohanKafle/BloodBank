@@ -167,12 +167,7 @@
                             <span>Our Goals</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#notification" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
-                            <i class='bx bx-bell'></i>
-                            <span>Notification</span>
-                        </a>
-                    </li>
+                    
                 </ul>
 
 

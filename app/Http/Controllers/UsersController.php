@@ -49,15 +49,17 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $data = User::find($id);
-        return view('users.edit', compact('data'));
+        $donor = User::find($id);
+        return view('users.edit', compact('donor'));
     }
 
-// public function update(Request $request, $id)
-//     {
-//         $data = ::find($id);
-//         return view('users', compact('data'));
-//     }
+public function update(Request $request, $id)
+    {
+        $donor = User::find($id);
+        $donor->update($request->all());
+
+        return view('users.profile');
+    }
 
     /**
      * Remove the specified resource from storage.

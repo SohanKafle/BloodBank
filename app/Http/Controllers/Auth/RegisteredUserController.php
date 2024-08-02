@@ -60,6 +60,11 @@ class RegisteredUserController extends Controller
 
         return redirect(route('dashboard', absolute: false));
     }
-    
+    public function show(){
+        $donors=User::all();
+        return view('donors.show',compact('donors'));
+    }
   
-}
+    }
+  
+
