@@ -1,4 +1,6 @@
-<div class="min-h-screen flex items-center justify-center bg-gray-100">
+@extends('layouts.master')
+@section('content')
+<div class="min-h-screen flex items-center justify-center bg-gray-100 mt-4">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h2 class="text-2xl font-bold mb-6 text-gray-800">Contact Us</h2>
         <form action="#" method="POST">
@@ -15,8 +17,9 @@
                 <textarea id="message" name="message" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
             </div>
             <div>
-                <button type="submit" class="w-full p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">Send Message</button>
+                <button type="submit" class="w-full p-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition duration-300">Send Message</button>
             </div>
         </form>
     </div>
 </div>
+@endsection
