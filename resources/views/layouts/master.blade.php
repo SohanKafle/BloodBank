@@ -95,33 +95,31 @@
 
                 <ul id="nav-links" class="hidden md:flex gap-10 items-center">
                     <li>
-                        <a href="/" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
+                        <a href="/" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-home'></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#about" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
+                        <a href="/about" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-user'></i>
                             <span>About Us</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#services" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
+                        <a href="#goals" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-cog'></i>
-                            <span>Our Services</span>
+                            <span>Our Goals</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
+                        <a href="/contact" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-envelope'></i>
                             <span>Contact Us</span>
                         </a>
                     </li>
                 </ul>
               
-                
-                
               
                 <div class="hidden md:flex items-center space-x-4 lg:order-2">
                     <a href="{{ route('login') }}">
@@ -157,7 +155,7 @@
                     <li>
                         <a href="#services" class="text-1xl font-bold flex items-center space-x-1 text-black hover:text-blue-500">
                             <i class='bx bx-cog'></i>
-                            <span>Our Services</span>
+                            <span>Our Goals</span>
                         </a>
                     </li>
                     <li>
@@ -185,17 +183,16 @@
         </nav>
     </header>
 
-    <!-- Main content -->
+
     @yield('content')
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 px-4 md:px-0">
 
             <div class="lg:col-span-2">
                 <h3 class="font-bold mb-2 ml-5">About Us</h3>
                 <p class="text-gray-400 ml-5">
-                    Hello there. How are ya </p>
+                If you are looking for a blood donor or wanting to donate blood then we are the one for you. We look forward to helping you!</p>
             </div>
 
             <div>

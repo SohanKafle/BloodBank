@@ -94,7 +94,7 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: red;
+            background-color: #D22B2B;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
@@ -109,7 +109,7 @@
             text-align: left;
         }
 
-        .btn{
+        .btn {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
@@ -118,7 +118,7 @@
             text-align: left;
         }
 
-        .btn:hover{
+        .btn:hover {
             background-color: #f1f1f1;
         }
 
@@ -129,17 +129,17 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
-        
     </style>
 </head>
 
 <body class="font-sans bg-gray-100 text-gray-900">
 
     <header class="bg-white">
-    <nav class="bg-red-600 shadow-md fixed top-0 left-0 w-full z-50">
-    <div class=" flex justify-between items-center py-0 pr-0 md:px-0 mr-4">
+        <nav class="bg-red-600 shadow-md fixed top-0 left-0 w-full z-50">
+            <div class=" flex justify-between items-center py-0 pr-0 md:px-0 mr-4">
 
-    <a href="/"> <img src="public/images/donor/logoo.png" alt="Bloodbank Logo" class="h-20 mr-20"></a>
+                <a href="{{route('users.index')}}"> <img class="h-20 mr-20" src="{{asset('images\donor\logoo.png')}}" alt="Bloodbank Logo" class="h-16"></a>
+
 
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-black hover:text-white focus:outline-none">
@@ -150,25 +150,25 @@
 
                 <ul id="nav-links" class="hidden md:flex items-center">
                     <li>
-                        <a href="/" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
+                        <a href="{{route('users.index')}}" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-home'></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#about" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
+                        <a href="{{route('users.about')}}" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-user'></i>
                             <span>About Us</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#services" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
+                        <a href="#goals" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-cog'></i>
-                            <span>Our Services</span>
+                            <span>Our Goals</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
+                        <a href="#notification" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-bell'></i>
                             <span>Notification</span>
                         </a>
@@ -196,7 +196,7 @@
             <div id="mobile-menu" class="md:hidden hidden bg-gray-100 shadow-md transition-all">
                 <ul class="flex flex-col items-center space-y-4 py-4">
                     <li>
-                        <a href="/" class="text-1xl font-bold flex items-center space-x-1 text-black hover:text-blue-500">
+                        <a href="{{route('users.index')}}">" class="text-1xl font-bold flex items-center space-x-1 text-black hover:text-blue-500">
                             <i class='bx bx-home'></i>
                             <span>Home</span>
                         </a>
@@ -208,9 +208,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#services" class="text-1xl font-bold flex items-center space-x-1 text-black hover:text-blue-500">
+                        <a href="#goals" class="text-1xl font-bold flex items-center space-x-1 text-black hover:text-blue-500">
                             <i class='bx bx-cog'></i>
-                            <span>Our Services</span>
+                            <span>Our Goals</span>
                         </a>
                     </li>
                 </ul>
@@ -244,58 +244,59 @@
         </nav>
     </header>
 
-    <!-- Main content -->
+
     @yield('content')
 
-    <!-- Footer -->
+
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 px-4 md:px-0">
 
             <div class="lg:col-span-2">
                 <h3 class="font-bold mb-2 ml-5">About Us</h3>
                 <p class="text-gray-400 ml-5">
-                    Hello there. How are ya </p>
+                If you are looking for a blood donor or wanting to donate blood then we are the one for you. We look forward to helping you!</p>
             </div>
 
             <div>
-                <h3 class="font-bold mb-2">Contact Info</h3>
+                <h3 class="font-bold mb-2 ml-4">Contact Info</h3>
                 <ul class="text-gray-400 ">
-                    <li class="flex items-center mb-3 hover:text-blue-400">
+                    <li class="flex items-center mb-3 font-medium hover:text-red-500">
                         <i class='bx bx-map mr-2'></i> Gaindakot-01, Nawalpur
                     </li>
-                    <li class="flex items-center mb-3 hover:text-blue-400">
+                    <li class="flex items-center mb-3 font-medium hover:text-red-500">
                         <i class='bx bx-phone mr-2'></i> 078-7501202 / 9812345678
                     </li>
-                    <li class="flex items-center mb-3 hover:text-blue-400">
+                    <li class="flex items-center mb-3 font-medium hover:text-red-500">
                         <i class='bx bx-envelope mr-2'></i> info@bloodbank.com
                     </li>
                 </ul>
             </div>
 
             <div>
-                <h3 class="font-bold mb-2">Quick Links</h3>
+                <h3 class="font-bold mb-2 ml-6">Quick Links</h3>
                 <ul>
-                    <li class="mb-2"><a href="/" class="hover:text-blue-400">Home</a></li>
-                    <li class="mb-2"><a href="#about" class="hover:text-blue-400">About Us</a></li>
-                    <li class="mb-2"><a href="#services" class="hover:text-blue-400">Notifications</a></li>
+                    <li class="mb-0 font-medium"><a href="{{route('users.index')}}" class="hover:text-red-500">Home</a></li>
+                    <li class="mb-0 font-medium"><a href="{{route('users.about')}}" class="hover:text-red-500">About Us</a></li>
+                    <li class="mb-0 font-medium"><a href="#goals" class="hover:text-red-500">Our Goals</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3 class="font-bold mb-2">Find Us On</h3>
                 <div class="flex space-x-4">
-                    <a href="#" class="hover:text-blue-400"><i class='bx bxl-facebook'></i></a>
-                    <a href="#" class="hover:text-blue-400"><i class='bx bxl-twitter'></i></a>
-                    <a href="#" class="hover:text-blue-400"><i class='bx bxl-instagram'></i></a>
-                    <a href="#" class="hover:text-blue-400"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" class="hover:text-red-500"><i class='bx bxl-facebook'></i></a>
+                    <a href="#" class="hover:text-red-500"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="hover:text-red-500"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="hover:text-red-500"><i class='bx bxl-linkedin'></i></a>
                 </div>
             </div>
         </div>
     </footer>
     <div class="footer-line"></div>
-    <div class="copyright text-center bg-gray-900 text-white py-2">
+    <div class="copyright text-center bg-gray-900 text-white py-2 font-medium">
         <p>&copy;{{date('Y')}} All Rights Reserved Blood Bank</p>
     </div>
+
 
     <!-- Back to top button -->
     <button class="back-to-top" id="back-to-top">

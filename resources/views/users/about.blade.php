@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.task')
 @section('content')
 <div class="bg-pink-100 py-8">
     <div class="relative h-80">
@@ -50,7 +50,7 @@
         <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
                 <div class="max-w-lg">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">About Us</h2>
+                    <h2 class="text-3xl font-bold text-red-500 mb-8 text-center">About Us</h2>
                     <p class="mt-4 text-gray-600 text-lg">
                        Blood Bank System shall remain an efficient, self-sustainable, and independent humanitarian organization committed to provide immediate relief to human suffering, under the Fundamental Principles of the Blood Bank, through its network of Blood Bank workers throughout the country working closely with communities in a democratic, transparent and participatory way.
                         If you are looking for a blood donor or wanting to donate blood then we are the one for you. We look forward to helping you!</p>
@@ -64,8 +64,8 @@
 
 
     <section class="text-gray-700 body-font bg-pink-100" id="gallery" data-aos="fade-down">
-        <div class="flex justify-center text-3xl font-bold text-gray-800 text-center py-10">
-            Our Happy Members
+        <div class="flex justify-center text-3xl font-bold text-red-500 text-center py-10">
+          Our Happy Members
         </div>
 
         <div class="grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
@@ -79,12 +79,14 @@
             </div>
 
             <div class="group relative">
-            <img src="images/donor/mohan.PNG" alt="Image 1" class="aspect-[2/3] h-80 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105" />
+            <img src="{{asset('images\donor\mohan.PNG')}}" alt="Image 1" class="aspect-[2/3] h-80 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105" />
             </div>
 
             <div class="group relative">
                 <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/3CEA/production/_128549551_khan2.jpg" alt="Image 1" class="aspect-[2/3] h-80 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105" />
-            </div> 
+            </div>
+            
+           
 
         </div>
 

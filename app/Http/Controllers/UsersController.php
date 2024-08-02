@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -20,6 +21,11 @@ class UsersController extends Controller
     public function profile()
     {
         return view('users.profile');
+    }
+
+    public function about()
+    {
+        return view('users.about');
     }
 
     /**
@@ -41,18 +47,17 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $data = User::find($id);
+        return view('users.edit', compact('data'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+// public function update(Request $request, $id)
+//     {
+//         $data = ::find($id);
+//         return view('users', compact('data'));
+//     }
 
     /**
      * Remove the specified resource from storage.

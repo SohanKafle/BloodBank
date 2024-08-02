@@ -80,14 +80,17 @@
             margin-top: 1px;
         }
 </style>
- <!-- Footer -->
+<br>
+<a href="{{route('users.edit')}}"><button type="submit" class="bg-red-600 hover:bg-red-800 text-white py-2 w-6/12 ml-80 rounded-lg mt-2">Edit</button></a><br>
+<a href="{{route('users.index')}}"><button type="submit" class="bg-red-600 hover:bg-red-800 text-white py-2 w-6/12 ml-80 rounded-lg mt-2">Home</button></a>
+ <br><br><!-- Footer -->
  <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 px-4 md:px-0">
 
             <div class="lg:col-span-2">
                 <h3 class="font-bold mb-2 ml-5">About Us</h3>
                 <p class="text-gray-400 ml-5">
-                    Hello there. How are ya </p>
+                If you are looking for a blood donor or wanting to donate blood then we are the one for you. We look forward to helping you! </p>
             </div>
 
             <div>
