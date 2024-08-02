@@ -10,13 +10,8 @@
 <body>
     <div class="grid grid-cols-2">
        <div class="relative">
-<<<<<<< HEAD
-            <a href="{{route('welcome')}}" class="absolute bg-blue-500 text-white px-2 py-3 m-2 rounded-lg">Go Home</a>
-            <img src="https://img.freepik.com/premium-vector/blood-donation-medical-background_87521-2933.jpg?w=360" alt="" class="w-full h-screen shadow-lg">
-=======
-            <a href="{{route('welcome')}}" class="absolute bg-red-500 hover:bg-red-700 text-white px-2 py-1 m-2 rounded-lg">Go Home</a>
+            <a href="{{route('welcome')}}" class="absolute bg-red-600 hover:bg-red-800 text-white px-2 py-1 m-2 rounded-lg">Go Home</a>
             <img src="https://www.cpsmumbai.org/Uploads/2762023161833920.png" alt="" class="w-full h-screen  shadow-lg">
->>>>>>> 9f83d881eda90441eb60c8d678fee280a63b9bdb
        </div>
         <div class="flex items-center justify-center w-8/12 mx-auto">
             <div class="text-center">
@@ -69,7 +64,7 @@
                     @error('photopath')
                     <p class="text-red-500 text-sm">{{$message}}</p>
                     @enderror
-                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white py-2 w-full rounded-lg mt-2">Register</button>
+                    <button type="submit" class="bg-red-600 hover:bg-red-800 text-white py-2 w-full rounded-lg mt-2">Register</button>
                 </form>
                 <p class="mt-4">Already have an account? <a href="{{route('login')}}" class="text-red-500 ">Login</a></p>
             </div>
