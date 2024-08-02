@@ -85,7 +85,7 @@
             text-decoration: none;
         }
 
-    
+
 
         li.dropdown {
             display: inline-block;
@@ -109,6 +109,19 @@
             text-align: left;
         }
 
+        .btn{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        .btn:hover{
+            background-color: #f1f1f1;
+        }
+
         .dropdown-content a:hover {
             background-color: #f1f1f1;
         }
@@ -116,6 +129,7 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        
     </style>
 </head>
 
@@ -137,25 +151,25 @@
 
                 <ul id="nav-links" class="hidden md:flex items-center">
                     <li>
-                        <a href="/" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">
+                        <a href="/" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
                             <i class='bx bx-home'></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#about" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">
+                        <a href="#about" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
                             <i class='bx bx-user'></i>
                             <span>About Us</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#services" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">
+                        <a href="#services" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
                             <i class='bx bx-cog'></i>
                             <span>Our Services</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">
+                        <a href="#contact" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
                             <i class='bx bx-bell'></i>
                             <span>Notification</span>
                         </a>
@@ -165,11 +179,17 @@
 
                 <ul>
                     <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">User</a>
+                        @auth
+                        <a href="javascript:void(0)" class="dropbtn text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">Hi, {{auth()->user()->name}}</a>
                         <div class="dropdown-content">
-                            <a href="#">Profile</a>
-                            <a href="#">Logout</a>
+                            <a href="{{route('users.profile')}}">Profile</a>
+                            <form action="{{route('logout')}}" method="post" class="inline">
+                                @csrf
+                                <button type="submit" class=" btn">Logout</button>
+                            </form>
+
                         </div>
+                        @endauth
                     </li>
                 </ul>
             </div>

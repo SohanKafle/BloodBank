@@ -43,7 +43,7 @@ class RegisteredUserController extends Controller
         $request->photopath->move(public_path('images/donor'), $photoname);
         $data['photopath'] = $photoname;
         User::create($data);
-        return redirect()->route('donors.index')->with('success','Donor Registered Successfully');
+        return redirect()->route('login');
 
 
 
