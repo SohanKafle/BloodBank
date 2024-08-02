@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Regsiter Page</title>
+    <title>Request Page</title>
     @vite('resources/css/app.css', 'resources/js/app.js')
 </head>
 <body>
@@ -15,8 +15,8 @@
        </div>
         <div class="flex items-center justify-center w-8/12 mx-auto">
             <div class="text-center">
-                <h2 class="font-bold text-2xl mb-5">Request Blood Form</h2>
-                <p class="font-semibold text-xl mb-5 text-red-500">Request Blood without signup!!</p>
+                <h2 class="font-bold text-2xl mb-5">Request Blood </h2>
+                
                 <form action="{{route('peoples.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="text" class="border border-gray-300 p-2 w-full mt-4 rounded-lg" placeholder="Name" name="name" value="{{old('name')}}">
@@ -57,7 +57,7 @@
                     @error('photopath')
                     <p class="text-red-500 text-sm">{{$message}}</p>
                     @enderror
-                    <button type="submit" class="bg-red-500 text-white py-2 w-full rounded-lg mt-2">Register</button>
+                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white py-2 w-full rounded-lg mt-2">Request</button>
                 </form>
                 
         </div>
