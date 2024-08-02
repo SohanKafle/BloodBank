@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DonorController;
 use App\Http\Controllers\PagesController;
@@ -19,7 +20,7 @@ Route::middleware(['auth','isAdmin'])->group(function () {
 Route::get('/peoples',[PeopleController::class,'index'])->name('peoples.index');
 Route::get('/peoples/create',[PeopleController::class,'create'])->name('peoples.create');
 Route::post('/peoples/store',[PeopleController::class,'store'])->name('peoples.store');
-Route::get('/donors/index',[DonorController::class,'index'])->name('donors.index');
+Route::get('donors/index/',[RegisteredUserController::class,'index'])->name('donors.index');
 
 
 // Route::get('/dashboard', function () {

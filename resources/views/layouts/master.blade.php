@@ -139,7 +139,6 @@
                 </div>
             </div>
                 
-                
 
             <div id="mobile-menu" class="md:hidden hidden bg-gray-100 shadow-md transition-all">
                 <ul class="flex flex-col items-center space-y-4 py-4">

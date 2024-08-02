@@ -10,7 +10,7 @@
 <body>
     <div class="grid grid-cols-2">
        <div class="relative">
-            <a href="{{route('welcome')}}" class="absolute bg-red-500 text-white px-2 py-3 m-2 rounded-lg">Go Home</a>
+            <a href="{{route('welcome')}}" class="absolute bg-red-600 hover:bg-red-800 text-white px-2 py-1 m-2 rounded-lg">Go Home</a>
             <img src="https://everestservice.com.np/upload/images/es-blood-bank.jpg" alt="" class="w-full h-screen shadow-lg">
        </div>
         <div class="flex items-center justify-center w-8/12 mx-auto">
@@ -20,7 +20,7 @@
                     @csrf
                     <input type="text" class="border border-gray-300 p-2 w-full mt-4 rounded-lg" placeholder="Email" name="email">
                     <input type="password" class="border border-gray-300 p-2 w-full mt-4 rounded-lg" placeholder="Password" name="password">
-                    <button type="submit" class="bg-blue-500 text-white py-2 w-full rounded-lg mt-2">Login</button>
+                    <button type="submit" class="bg-red-600 hover:bg-red-800 text-white py-2 w-full rounded-lg mt-2">Login</button>
                 </form>
                 <p class="mt-4">Don't have an account? <a href="{{route('register')}}" class="text-red-500">Become Donor</a></p>
             </div>
