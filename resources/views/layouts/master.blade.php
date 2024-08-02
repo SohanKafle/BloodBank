@@ -15,12 +15,8 @@
     <style>
         * {
             box-sizing: border-box;
-<<<<<<< HEAD
-           
-=======
->>>>>>> 5a3ea78d5ec41c920d7a56797540326216bf5801
         }
-
+        
         html,
         body {
             margin: 0;
@@ -99,38 +95,34 @@
 
                 <ul id="nav-links" class="hidden md:flex gap-10 items-center">
                     <li>
-                        <a href="/" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">
+                        <a href="/" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
                             <i class='bx bx-home'></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#about" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">
+                        <a href="#about" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
                             <i class='bx bx-user'></i>
                             <span>About Us</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#services" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">
+                        <a href="#services" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
                             <i class='bx bx-cog'></i>
                             <span>Our Services</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#contact" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">
+                        <a href="#contact" class="text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">
                             <i class='bx bx-envelope'></i>
                             <span>Contact Us</span>
                         </a>
                     </li>
                 </ul>
-                @auth
-                <a href="" class="text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">Hi, {{auth()->user()->name}}</a>
+              
                 
-                <form action="{{route('logout')}}" method="post" class="inline">
-                    @csrf
-                    <button type="submit"><i class="ri-logout-box-r-line"></i></button>
-                </form>
-                @else
+                
+              
                 <div class="hidden md:flex items-center space-x-4 lg:order-2">
                     <a href="{{ route('login') }}">
                         <button type="button" class="px-4 lg:px-5 py-2 lg:py-2.5 mr-2 text-white bg-gradient-to-br from-purple-500 to-purple-400 hover:bg-gradient-to-bl font-medium rounded-lg text-lg">
@@ -146,7 +138,6 @@
                     </a>
                 </div>
             </div>
-                @endauth
                 
 
             <div id="mobile-menu" class="md:hidden hidden bg-gray-100 shadow-md transition-all">
