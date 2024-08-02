@@ -59,4 +59,8 @@ class RegisteredUserController extends Controller
 
         return redirect(route('dashboard', absolute: false));
     }
+    public function index(){
+        $data=User::all();
+        return view('donors.index',compact('data'));
+    }
 }
