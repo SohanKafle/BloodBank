@@ -85,7 +85,7 @@
             text-decoration: none;
         }
 
-    
+
 
         li.dropdown {
             display: inline-block;
@@ -101,7 +101,7 @@
             border-radius: 20px;
         }
 
-        .dropdown-content a {
+        .dropdown-content a, button {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
@@ -109,7 +109,7 @@
             text-align: left;
         }
 
-        .dropdown-content a:hover {
+        .dropdown-content a:hover, button:hover {
             background-color: #f1f1f1;
         }
 
@@ -165,11 +165,17 @@
 
                 <ul>
                     <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">User</a>
+                        @auth
+                        <a href="javascript:void(0)" class="dropbtn text-2xl font-bold flex items-center space-x-1 text-black hover:text-white">Hi, {{auth()->user()->name}}</a>
                         <div class="dropdown-content">
                             <a href="#">Profile</a>
-                            <a href="#">Logout</a>
+                            <form action="{{route('logout')}}" method="post" class="inline">
+                                @csrf
+                                <button type="submit" class="w-full">Logout</button>
+                            </form>
+
                         </div>
+                        @endauth
                     </li>
                 </ul>
             </div>
