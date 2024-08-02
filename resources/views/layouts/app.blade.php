@@ -30,19 +30,19 @@
         @endif
 
         <div class="flex">
-            <div class="w-56 h-screen bg-gray-100 shadow">
+            <div class="w-56 h-screen bg-gray-100 shadow fixed left-0 z-20">
                 <img src="{{asset('images/donor/adminlogo.png')}}" alt="" class="p-2 m-2 w-9/12 mx-auto mt-5 ">
                 <div class="mt-5">
                     <a href="{{route('dashboard')}}" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white"><i class="ri-dashboard-fill px-2"></i>Dashboard</a>
-                    <a href="{{route('donors.index')}}" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white"><i class="ri-user-heart-line px-2"></i>Donors</a>
-                    <a href="" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white"><i class="ri-contrast-drop-2-line px-2"></i>Blood Requests</a>
+                    <a href="{{route('donors.show')}}" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white"><i class="ri-user-heart-line px-2"></i>Donors</a>
+                    <a href="{{route('peoples.index')}}" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white"><i class="ri-contrast-drop-2-line px-2"></i>Blood Requests</a>
                     <form action="{{route('logout')}}" method="post" class="text-xl block pl-4 p-2 m-2 border-b border-red-500 hover:bg-red-700 hover:text-white">
                         @csrf
                         <button type="submit" class="block w-full text-left"><i class="ri-logout-circle-line px-2"></i> Logout</button>
                     </form>
                 </div>
             </div>
-            <div class="p-4 flex-1">
+            <div class="p-4 flex-1 pl-64">
                 @yield('content')
             </div>
         </div>

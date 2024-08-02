@@ -22,14 +22,15 @@
                   Address
                     </th>
                     <th scope="col" class="px-6 py-3">
-                       Report
+                    Photo
                     </th>
                 </tr>
             </thead>
+         
             <tbody>
-                @foreach($data as $donor)
+                @foreach($donors as $donor)
+              
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                 
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                   {{$donor->name}}
                     </th>
@@ -46,11 +47,10 @@
                    {{$donor->address}}
                       </td>
                       <td class="px-6 py-4">
-                     Photo
+                        <img src="{{asset('images/donor/'.$donor->photopath)}}" class="w-24" alt="">
                       </td>
-                      @endforeach
                 </tr>
-              
+                @endforeach
             
             </tbody>
         </table>

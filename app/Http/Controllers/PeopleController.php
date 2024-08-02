@@ -8,7 +8,11 @@ use Illuminate\Http\Request;
 class PeopleController extends Controller
 {
   public function index(){
-    return view('peoples.index');
+    $data=People::all();
+    return view('peoples.index',compact('data'));
+  }
+  public function home(){
+    return view('peoples.home');
   }
   public function create(){
     return view('peoples.create');
@@ -16,17 +20,18 @@ class PeopleController extends Controller
   public function store(Request $request){
     $data=$request->validate([
       'name'=>'required',
-      'phone'=>'required|numeric|unique',
+      'phone'=>'required|numeric',
       'address'=>'required',
       'bloodgroup'=>'required',
       'age'=>'required|numeric',
-      'photopath'=>'required'
+      'photopath'=>'required',
 
     ]);
     $photoname = time().'.'.$request->photopath->extension();
     $request->photopath->move(public_path('images/people'), $photoname);
     $data['photopath'] = $photoname;
     People::create($data);
-    return redirect()->route('peoples.index')->with('success','Blood Requested Successfully');
+    return redirect()->route('peoples.home')->with('success','Blood Requested Successfully');
   }
+
 }

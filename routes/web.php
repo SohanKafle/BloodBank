@@ -18,9 +18,12 @@ Route::middleware(['auth','isAdmin'])->group(function () {
 
 });
 Route::get('/peoples',[PeopleController::class,'index'])->name('peoples.index');
+Route::get('/peoples/home/',[PeopleController::class,'home'])->name('peoples.home');
 Route::get('/peoples/create',[PeopleController::class,'create'])->name('peoples.create');
 Route::post('/peoples/store',[PeopleController::class,'store'])->name('peoples.store');
 Route::get('donors/index/',[RegisteredUserController::class,'index'])->name('donors.index');
+Route::get('/donors/show/',[RegisteredUserController::class,'show'])->name('donors.show');
+
 
 
 // Route::get('/dashboard', function () {

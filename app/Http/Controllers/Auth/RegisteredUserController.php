@@ -8,6 +8,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
@@ -43,7 +44,7 @@ class RegisteredUserController extends Controller
         $request->photopath->move(public_path('images/donor'), $photoname);
         $data['photopath'] = $photoname;
         User::create($data);
-        return redirect()->route('donors.index')->with('success','Donor Registered Successfully');
+        return redirect()->route('login')->with('success','Donor Registered Successfully');
 
 
 
@@ -59,8 +60,6 @@ class RegisteredUserController extends Controller
 
         return redirect(route('dashboard', absolute: false));
     }
-    public function index(){
-        $data=User::all();
-        return view('donors.index',compact('data'));
-    }
+    
+  
 }
