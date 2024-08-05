@@ -18,6 +18,13 @@ return new class extends Migration
             $table->string('bloodgroup');
             $table->integer('age');
             $table->string('photopath');
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> ab3913947e342d81d91154451c519424fbde5e04
             $table->timestamps();
         });
     }
