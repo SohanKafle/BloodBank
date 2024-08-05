@@ -150,19 +150,19 @@
 
                 <ul id="nav-links" class="hidden md:flex items-center">
                     <li>
-                        <a href="{{route('users.index')}}" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
+                        <a href="{{route('users.index')}}" class="text-xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-home'></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{route('users.about')}}" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
+                        <a href="{{route('users.about')}}" class="text-xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-user'></i>
                             <span>About Us</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#goals" class="text-2xl font-medium flex items-center space-x-1 text-white hover:text-black">
+                        <a href="#goals" class="text-xl font-medium flex items-center space-x-1 text-white hover:text-black">
                             <i class='bx bx-cog'></i>
                             <span>Our Goals</span>
                         </a>
@@ -174,7 +174,7 @@
                 <ul>
                     <li class="dropdown">
                         @auth
-                        <a href="javascript:void(0)" class="dropbtn text-2xl font-medium flex items-center space-x-1 text-black hover:text-white">Hi, {{auth()->user()->name}}</a>
+                        <a href="javascript:void(0)" class="dropbtn text-xl font-medium flex items-center space-x-1 text-black hover:text-white">Hi, {{auth()->user()->name}}</a>
                         <div class="dropdown-content">
                             <a href="{{route('users.profile')}}">Profile</a>
                             <form action="{{route('logout')}}" method="post" class="inline">
